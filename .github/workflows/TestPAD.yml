@@ -1,0 +1,19 @@
+name: Run Power Automate Desktop Flow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  run-pad-flow:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run Power Automate Desktop Flow
+      run: |
+        & "C:\Program Files (x86)\Power Automate Desktop\PAD.Console.Host.exe" "ms-powerautomate:/console/flow/run?environmentid=Default-3b0e7247-e0d5-44bf-8ed1-d01b18d16ca2&workflowid=b140a8b4-c000-4ffb-ad9a-f34cf2abc64a&source=Other"
