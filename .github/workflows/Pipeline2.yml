@@ -4,7 +4,7 @@ name: Run Power Automate Desktop Flow
 
 jobs:
   run-pad-flow:
-    runs-on: windows-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout repository
